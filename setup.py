@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='nose-blockage',
-    version='0.1',
+    version='0.1.1',
     description='Raise errors when communicating outside of tests',
     long_description=open('README.rst').read(),
     author='Andy McKay',
