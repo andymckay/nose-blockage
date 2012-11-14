@@ -14,7 +14,7 @@ By default it whitelists `localhost` and `127.0.0.1`. To change the whitelist::
   --http-whitelist=some.site,some.other.site
 
 If the code hits a http connection then instead of completing it will raise a
-MockHTTPCall exception. Please go an mock your tests appropriately.
+MockHTTPCall exception. Please go and mock your tests appropriately.
 
 To come, maybe more libs.
 

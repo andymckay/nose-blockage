@@ -2,13 +2,7 @@ import httplib
 import logging
 import os
 
-NOSE = False
-try:
-    from nose.plugins.base import Plugin
-    NOSE = True
-except ImportError:
-    class Plugin:
-        pass
+from nose.plugins.base import Plugin
 
 log = logging.getLogger(__name__)
 
@@ -17,7 +11,6 @@ class MockHTTPCall(Exception):
     # If you don't mock out http calls in your tests, we'll raise an error
     # for you so you'll remember to do it next time.
     pass
-
 
 
 class NoseBlockage(Plugin):
