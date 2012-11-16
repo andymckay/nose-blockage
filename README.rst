@@ -9,6 +9,9 @@ Then add the following to your tests::
 
   --with-blockage
 
+Blocking HTTP
+-------------
+
 By default it whitelists `localhost` and `127.0.0.1`. To change the whitelist::
 
   --http-whitelist=some.site,some.other.site
@@ -16,5 +19,11 @@ By default it whitelists `localhost` and `127.0.0.1`. To change the whitelist::
 If the code hits a http connection then instead of completing it will raise a
 MockHTTPCall exception. Please go and mock your tests appropriately.
 
-To come, maybe more libs.
+Blocking SMTP
+-------------
 
+By default it whitelists no domains. To change the whitelist::
+
+  --smtp-whitelist=some.site
+
+It will raise a MockSMTPCall exception.
