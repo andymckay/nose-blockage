@@ -77,7 +77,7 @@ class NoseBlockage(Plugin):
 
         whitelisted.blockage = True
 
-        if not getattr(httplib.HTTPConnection, 'blockage', False):
+        if not getattr(smtplib.SMTP, 'blockage', False):
             log.debug('Monkey patching smtplib')
             smtplib.SMTP.old = smtplib.SMTP.__init__
             smtplib.SMTP.__init__ = whitelisted
