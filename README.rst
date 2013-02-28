@@ -9,6 +9,17 @@ Then add the following to your tests::
 
   --with-blockage
 
+If you use `django-nose <https://github.com/jbalogh/django-nose>`_
+then add this to your Django settings to activate it::
+
+  NOSE_PLUGINS = [
+      'blockage.plugins.NoseBlockage',
+  ]
+  NOSE_ARGS = [
+      '--with-blockage',
+      # ...
+  ]
+
 Blocking HTTP
 -------------
 
