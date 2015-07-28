@@ -1,4 +1,7 @@
-import httplib
+try:
+    import httplib
+except ImportError:
+    import http.client as httplib
 import logging
 import os
 import smtplib
